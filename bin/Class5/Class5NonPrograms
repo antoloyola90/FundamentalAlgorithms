@@ -1,0 +1,27 @@
+1) a) Given two strings, GCS will provide the greatest common not-necessarily-sequential substring 
+		(can be even by removing characters in between). 
+		
+1) b) let A[1...m], B[1...n] be the two strings.
+
+	length(i, j) = 0											--- if i = 0 or j =0
+	length(i, j) = 1 + length(i-1, j-1)							--- if A[i] == B[i]
+	length(i, j) = Math.max{ length(i-1, j), length(i, j-1) }	--- else
+	
+2) LaTeX Problem is the algorithm for the most optimum spacing in between words to allow for right 
+	justification of lines in paragraphs. It also takes into account the indentation on the first 
+	line and the case when the last line is shorter than required .
+	
+	TotalCost 	= Math.min{Main(k-1) + LastLineCost(k)} from 1<=k<=n
+	Main		= 0																		--- if i == 0
+	Main		= Math.min{MainBody(h-1) + RightJustificationCost(h,i)} from 1<=h<=i		--- if i > 0
+	
+6) 
+	a) This runs in O(mn) time. To calculate length(m,n) it spawns to jobs length(m-1, n) & length(m, n-1). 
+		And since we are using the lookup table, each table location pays only for itself plus some
+		constant-time calculations. The table is n * m. 
+		
+	b) 
+
+		
+
+	

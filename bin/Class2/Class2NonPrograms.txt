@@ -1,0 +1,31 @@
+Ex 2.1) a) Preorder : 51, ,6, 3, 5, 14, 7, 11
+Ex 2.1) b) Preorder : 3, 5, 6, 7, 11, 14, 51
+Ex 2.1) c) Preorder : 5, 3, 11, 7, 14, 6, 51
+
+Ex 2.5)
+
+	function StackVal(;; L);
+		input : L is stack that represents an arithmetic expression as described;
+		output : Returns the evaluation of L;
+		x <- PopFrom(L);
+		if x is a number then return(x)
+		else
+			return ( eval(x, Stack(L), Stack(L) ) );  <-----------------------------
+		endif
+	end_StackVal;
+
+Ex 2.6) 
+	
+	a) T & S are mutually reverse prints of the vertices
+	
+	b) in S we do -> go through vertices left-to-right, print leaves left-to-right, print vertex and so on..
+	   in T we do -> print vertex, print leaves right-to-left, go through vertices right=to-left  
+	   
+	   you reach the first node in S as the last node in T
+	   you reach the second node in S as the second-to-last node in T
+	   this goes on for all n
+	   	 	
+Ex 2.19
+
+	a) Preorder listing produces the same result
+	b) Postorder listing produces a different result 
